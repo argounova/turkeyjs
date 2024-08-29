@@ -1,10 +1,23 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Countdown from "../../components/Countdown";
+"use client"
+import Image from "next/image"
+import styles from "./page.module.css"
+import Countdown from "../../components/Countdown"
+import { useState } from "react"
+import {
+  Button,
+ } from "@mui/material"
+import AppetizersModal from "../../components/MenuModals/AppetizersModal"
+import DessertsModal from "../../components/MenuModals/DessertsModal"
+import DrinksModal from "../../components/MenuModals/DrinksModal"
+import SidesModal from "../../components/MenuModals/SidesModal"
+
 
 export default function Home() {
-  const targetDate = '2024-11-28T20:00:00';
+  const targetDate = '2024-11-28T05:00:00'
+  const [shouldShowModal, setShouldShowModal] = useState(false)
+
   return (
+    <>
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -13,7 +26,7 @@ export default function Home() {
         </p>
         <div>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://github.com/argounova"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -42,56 +55,43 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button onClick={() => setShouldShowModal(!shouldShowModal)}>
           <h2>
             Apps <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about finger foods and li'l smokies.</p>
-        </a>
+        </Button>
+        <p>Find in-depth information about finger foods and li'l smokies.</p>
+        <AppetizersModal 
+          shouldShowModal={shouldShowModal} 
+          onRequestClose={() => {setShouldShowModal(!shouldShowModal)}}
+        />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button >
           <h2>
             Sides <span>-&gt;</span>
           </h2>
-          <p>Learn about Turkey.js and its interactive side dishes!</p>
-        </a>
+        </Button>
+        <p>Learn about Turkey.js and its interactive side dishes!</p>
+        <SidesModal 
+          shouldShowModal={shouldShowModal} 
+          onRequestClose={() => {setShouldShowModal(!shouldShowModal)}}
+        />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button >
           <h2>
             Desserts <span>-&gt;</span>
           </h2>
-          <p>Explore the sweet side of Turkey.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </Button>
+        <p>Explore the sweet side of Turkey.js.</p>
+        
+        <Button >
           <h2>
             Drinks <span>-&gt;</span>
           </h2>
-          <p>
-            Instantly deploy your Turkey.js attitude with a liquid refresher.
-          </p>
-        </a>
+        </Button>
+          <p>Instantly deploy your Turkey.js attitude with a liquid refresher.</p>
       </div>
     </main>
-  );
+    </>
+  )
 }
