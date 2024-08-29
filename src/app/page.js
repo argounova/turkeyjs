@@ -14,10 +14,12 @@ import SidesModal from "../../components/MenuModals/SidesModal"
 
 export default function Home() {
   const targetDate = '2024-11-28T05:00:00'
-  const [shouldShowModal, setShouldShowModal] = useState(false)
+  const [shouldShowAppModal, setShouldShowAppModal] = useState(false)
+  const [shouldShowDesModal, setShouldShowDesModal] = useState(false)
+  const [shouldShowDrinksModal, setShouldShowDrinksModal] = useState(false)
+  const [shouldShowSidesModal, setShouldShowSidesModal] = useState(false)
 
   return (
-    <>
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -55,43 +57,50 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <Button onClick={() => setShouldShowModal(!shouldShowModal)}>
+        <Button onClick={() => setShouldShowAppModal(!shouldShowAppModal)}>
           <h2>
             Apps <span>-&gt;</span>
           </h2>
         </Button>
         <p>Find in-depth information about finger foods and li'l smokies.</p>
         <AppetizersModal 
-          shouldShowModal={shouldShowModal} 
-          onRequestClose={() => {setShouldShowModal(!shouldShowModal)}}
+          shouldShowAppModal={shouldShowAppModal} 
+          onRequestClose={() => {setShouldShowAppModal(!shouldShowAppModal)}}
         />
 
-        <Button >
+        <Button onClick={() => setShouldShowSidesModal(!shouldShowSidesModal)} >
           <h2>
             Sides <span>-&gt;</span>
           </h2>
         </Button>
         <p>Learn about Turkey.js and its interactive side dishes!</p>
         <SidesModal 
-          shouldShowModal={shouldShowModal} 
-          onRequestClose={() => {setShouldShowModal(!shouldShowModal)}}
+          shouldShowSidesModal={shouldShowSidesModal} 
+          onRequestClose={() => {setShouldShowSidesModal(!shouldShowSidesModal)}}
         />
 
-        <Button >
+        <Button onClick={() => setShouldShowDesModal(!shouldShowDesModal)} >
           <h2>
             Desserts <span>-&gt;</span>
           </h2>
         </Button>
         <p>Explore the sweet side of Turkey.js.</p>
+        <DessertsModal
+          shouldShowDesModal={shouldShowDesModal} 
+          onRequestClose={() => {setShouldShowDesModal(!shouldShowDesModal)}}
+        />
         
-        <Button >
+        <Button onClick={() => setShouldShowDrinksModal(!shouldShowDrinksModal)} >
           <h2>
             Drinks <span>-&gt;</span>
           </h2>
         </Button>
-          <p>Instantly deploy your Turkey.js attitude with a liquid refresher.</p>
+        <p>Instantly deploy your Turkey.js attitude with a liquid refresher.</p>
+        <DrinksModal
+          shouldShowDrinksModal={shouldShowDrinksModal} 
+          onRequestClose={() => {setShouldShowDrinksModal(!shouldShowDrinksModal)}}
+        />
       </div>
     </main>
-    </>
   )
 }

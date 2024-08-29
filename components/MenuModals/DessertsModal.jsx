@@ -2,10 +2,10 @@ import MenuModal from "."
 import { dessertsMenu } from "../../data/menuItems"
 
 
-const DessertsModal = ({ shouldShowModal, onRequestClose }) => {
+const DessertsModal = ({ shouldShowDesModal, onRequestClose }) => {
   return (
     <MenuModal 
-      shouldShow={shouldShowModal}
+      shouldShow={shouldShowDesModal}
       onRequestClose={onRequestClose}
     >
         <h2>Desserts Menu</h2>
