@@ -1,12 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Countdown from "../../components/Countdown";
 
 export default function Home() {
+  const targetDate = '2024-11-28T20:00:00';
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Thanksgiving is November 25th
+        <Countdown targetDate={targetDate} />
+        'til Thanksgiving!
         </p>
         <div>
           <a
