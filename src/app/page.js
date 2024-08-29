@@ -16,11 +16,11 @@ export default function Home() {
           >
             By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/argounova-logo.png"
+              alt="Argounova Logo"
               className={styles.vercelLogo}
-              width={100}
-              height={24}
+              width={200}
+              height={40}
               priority
             />
           </a>
@@ -30,7 +30,7 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/turkeyjs-logo-white.png"
+          src="/turkeyjs-logo-black.png"
           alt="Turkey.js Logo"
           width={360}
           height={74}
