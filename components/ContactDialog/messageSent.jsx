@@ -15,7 +15,7 @@ export default function AlertDialog(props) {
 
   const handleClose = () => {
     setOpen(false);
-    location.reload();
+    location.assign("https://www.turkeyjs.org");
   };
 
   return (
@@ -35,7 +35,7 @@ export default function AlertDialog(props) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button href="/" autoFocus>
+          <Button onClick={handleClose} autoFocus>
             Okay
           </Button>
         </DialogActions>
