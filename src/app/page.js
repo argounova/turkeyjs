@@ -41,7 +41,6 @@ export default function Home() {
             <Image
               src="/argounova-logo.png"
               alt="Argounova Logo"
-              className={styles.vercelLogo}
               width={200}
               height={40}
               priority
@@ -59,6 +58,9 @@ export default function Home() {
           height={74}
           priority
         />
+        <p style={{ textAlign: 'center', zIndex: '10' }}>
+          The most delicious framework for Thanksgiving.  Check out the docs below for details.  Note that there will be two turkeys this year, one traditionally roasted and the other smoked.
+        </p>
       </div>
 
       <div className={styles.grid}>

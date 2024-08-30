@@ -83,7 +83,7 @@ export const sidesMenu = [
   },
   {
     id: 3,
-    name: 'Cranberry Sauce (Jenna&#39s Recipe)',
+    name: 'Cranberry Sauce',
   },
   {
     id: 4,
@@ -99,7 +99,7 @@ export const sidesMenu = [
   },
   {
     id: 7,
-    name: 'Macaroni & Cheese (Casey&#39s Recipe)',
+    name: 'Macaroni & Cheese',
   },
   {
     id: 8,

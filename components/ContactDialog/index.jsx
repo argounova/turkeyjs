@@ -54,7 +54,7 @@ export default function FormDialog() {
     }
 
     console.log();
-    emailjs.sendForm('service_peaz7nq', 'template_iuipk7c', form.current, 'ZElOBNy_cU2ZofiP0');
+    emailjs.sendForm('service_64stmiw', 'template_hr8wahr', form.current, 'GjEtKtgG1YyZS6oHm');
 
     setFormName('');
     setFormEmail('');
