@@ -1,5 +1,12 @@
 import MenuModal from "."
 import { drinksMenu } from "../../data/menuItems"
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button
+} from '@mui/material'
 
 
 const DrinksModal = ({ shouldShowDrinksModal, onRequestClose }) => {
@@ -8,14 +15,22 @@ const DrinksModal = ({ shouldShowDrinksModal, onRequestClose }) => {
       shouldShow={shouldShowDrinksModal}
       onRequestClose={onRequestClose}
     >
-        <h2>Drinks Menu</h2>
-        <ul>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          component="img"
+          height="140"
+          image="/drinks-modal-media.png"
+          alt="Drinks Image"
+        />
+        <CardContent>
           {drinksMenu.map((item) => (
-            <li key={item.id}>
-              <h3>{item.name}</h3>
-            </li>
+            <h3 key={item.id}>{item.name}</h3>
           ))}
-        </ul>
+        </CardContent>
+        <CardActions>
+          <Button size="small" href='/contact'>Menu Suggestions?</Button>
+        </CardActions>
+      </Card> 
     </MenuModal>
   )
 }

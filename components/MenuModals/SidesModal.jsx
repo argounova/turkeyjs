@@ -1,5 +1,12 @@
 import MenuModal from "."
 import { sidesMenu } from "../../data/menuItems"
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button
+} from '@mui/material'
 
 
 const SidesModal = ({ shouldShowSidesModal, onRequestClose }) => {
@@ -8,14 +15,22 @@ const SidesModal = ({ shouldShowSidesModal, onRequestClose }) => {
       shouldShow={shouldShowSidesModal}
       onRequestClose={onRequestClose}
     >
-        <h2>Sides Menu</h2>
-        <ul>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          component="img"
+          height="140"
+          image="/sides-modal-media.png"
+          alt="Sides Image"
+        />
+        <CardContent>
           {sidesMenu.map((item) => (
-            <li key={item.id}>
-              <h3>{item.name}</h3>
-            </li>
+            <h3 key={item.id}>{item.name}</h3>
           ))}
-        </ul>
+        </CardContent>
+        <CardActions>
+          <Button size="small" href='/contact'>Menu Suggestions?</Button>
+        </CardActions>
+      </Card> 
     </MenuModal>
   )
 }

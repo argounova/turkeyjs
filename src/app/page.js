@@ -48,7 +48,7 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/turkeyjs-logo-black.png"
+          src="/turkeyjs-logo-black-outerglow.png"
           alt="Turkey.js Logo"
           width={360}
           height={74}
