@@ -14,7 +14,7 @@ display: flex;
 `
 
 export const ModalBody = styled.div`
-margin: 25% auto;
+margin: auto;
 
 
 .closeIcon {

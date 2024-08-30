@@ -1,7 +1,7 @@
 "use client"
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import styles from "./page.module.css"
-import Countdown from "../../components/Countdown"
 import { useState } from "react"
 import {
   Button,
@@ -10,6 +10,11 @@ import AppetizersModal from "../../components/MenuModals/AppetizersModal"
 import DessertsModal from "../../components/MenuModals/DessertsModal"
 import DrinksModal from "../../components/MenuModals/DrinksModal"
 import SidesModal from "../../components/MenuModals/SidesModal"
+
+const Countdown = dynamic(() => import("../../components/Countdown"), {
+  ssr: false,
+})
+
 
 
 export default function Home() {

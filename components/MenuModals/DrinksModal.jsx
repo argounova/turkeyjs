@@ -28,7 +28,7 @@ const DrinksModal = ({ shouldShowDrinksModal, onRequestClose }) => {
           ))}
         </CardContent>
         <CardActions>
-          <Button size="small" href='/contact'>Menu Suggestions?</Button>
+          <Button size="small" href='/menu-suggestions'>Menu Suggestions?</Button>
         </CardActions>
       </Card> 
     </MenuModal>
