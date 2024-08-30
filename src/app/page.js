@@ -13,7 +13,7 @@ import SidesModal from "../../components/MenuModals/SidesModal"
 
 
 export default function Home() {
-  const targetDate = '2024-11-28T05:00:00'
+  const targetDate = '2024-11-28T00:00:00'
   const [shouldShowAppModal, setShouldShowAppModal] = useState(false)
   const [shouldShowDesModal, setShouldShowDesModal] = useState(false)
   const [shouldShowDrinksModal, setShouldShowDrinksModal] = useState(false)
@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <Button onClick={() => setShouldShowAppModal(!shouldShowAppModal)}>
+        <Button color="inherit" onClick={() => setShouldShowAppModal(!shouldShowAppModal)}>
           <h2>
             Apps <span>-&gt;</span>
           </h2>
@@ -68,7 +68,7 @@ export default function Home() {
           onRequestClose={() => {setShouldShowAppModal(!shouldShowAppModal)}}
         />
 
-        <Button onClick={() => setShouldShowSidesModal(!shouldShowSidesModal)} >
+        <Button color="inherit" onClick={() => setShouldShowSidesModal(!shouldShowSidesModal)} >
           <h2>
             Sides <span>-&gt;</span>
           </h2>
@@ -79,7 +79,7 @@ export default function Home() {
           onRequestClose={() => {setShouldShowSidesModal(!shouldShowSidesModal)}}
         />
 
-        <Button onClick={() => setShouldShowDesModal(!shouldShowDesModal)} >
+        <Button color="inherit" onClick={() => setShouldShowDesModal(!shouldShowDesModal)} >
           <h2>
             Desserts <span>-&gt;</span>
           </h2>
@@ -90,7 +90,7 @@ export default function Home() {
           onRequestClose={() => {setShouldShowDesModal(!shouldShowDesModal)}}
         />
         
-        <Button onClick={() => setShouldShowDrinksModal(!shouldShowDrinksModal)} >
+        <Button color="inherit" onClick={() => setShouldShowDrinksModal(!shouldShowDrinksModal)} >
           <h2>
             Drinks <span>-&gt;</span>
           </h2>

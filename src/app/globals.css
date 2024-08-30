@@ -9,20 +9,20 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  /* --primary-glow: conic-gradient(
+  --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
-    rgb(217, 82, 4, 0.7) 0deg,
-    rgb(242, 92, 5, 0.7) 55deg,
+    rgb(217, 82, 4, 0.1) 0deg,
+    rgb(242, 92, 5, 0.1) 55deg,
     #F27405 120deg,
     rgb(242, 142, 19) 160deg,
     transparent 360deg
-  ); */
-  /* --secondary-glow: linear-gradient(
+  );
+  --secondary-glow: linear-gradient(
     to bottom right,
-    rgba(242, 92, 5, 1),
-    rgba(242, 142, 19, 0.4),
-    rgba(217, 82, 4, 1)
-  ); */
+    rgba(242, 92, 5, .5),
+    rgba(242, 142, 19, 0.6),
+    rgba(217, 82, 4, .1)
+  );
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;

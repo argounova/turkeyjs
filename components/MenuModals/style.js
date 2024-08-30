@@ -10,36 +10,25 @@ width: 100%;
 height: 100%;
 overflow: auto;
 background-color: rgba(0, 0, 1, 0.7);
+display: flex;
 `
 
 export const ModalBody = styled.div`
-margin: 10% auto;
-min-width: 390px;
-max-width: 85vw;
-background-color: rgba(255, 255, 255, 1);
-border-radius: 10px;
+margin: 25% auto;
 
 
 .closeIcon {
   color: var(--mb1-3);
   font-size: 50px;
-  position: absolute;
-  right: 0;
-  top: 0;
   cursor: pointer;
+  margin-bottom: 40px;
+}
 
-  @media (min-width: 800px) {
-    right: 100px;
-    top: 50px;
-  }
-  @media (min-width: 1200px) {
-    right: 300px;
-  }
-  @media (min-width: 1600px) {
-    right: 500px;
-  }
-  @media (min-width: 2000px) {
-    right: 700px;
-  }
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
 }
 `
