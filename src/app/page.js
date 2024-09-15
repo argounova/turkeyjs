@@ -58,7 +58,7 @@ export default function Home() {
           height={74}
           priority
         />
-        <p style={{ textAlign: 'center', zIndex: '10' }}>
+        <p style={{ textAlign: 'center', zIndex: '1' }}>
           The most delicious framework for Thanksgiving.  Check out the docs below for details.  Note that there will be two turkeys this year, one traditionally roasted and the other smoked.
         </p>
       </div>
