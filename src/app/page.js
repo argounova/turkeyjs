@@ -69,7 +69,7 @@ export default function Home() {
             Apps <span>-&gt;</span>
           </h2>
         </Button>
-        <p>Find in-depth information about finger foods and li'l smokies.</p>
+        <p>Find in-depth information about finger foods and lil smokies.</p>
         <AppetizersModal 
           shouldShowAppModal={shouldShowAppModal} 
           onRequestClose={() => {setShouldShowAppModal(!shouldShowAppModal)}}
