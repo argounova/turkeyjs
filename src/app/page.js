@@ -80,7 +80,7 @@ export default function Home() {
             Sides <span>-&gt;</span>
           </h2>
         </Button>
-        <p>Learn about Turkey.js and its interactive side dishes!</p>
+        <p>Learn about Turkey.js and its interactive side dishes.</p>
         <SidesModal 
           shouldShowSidesModal={shouldShowSidesModal} 
           onRequestClose={() => {setShouldShowSidesModal(!shouldShowSidesModal)}}
